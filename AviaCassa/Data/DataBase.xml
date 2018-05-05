@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<!DOCTYPE flights SYSTEM "DataBase.dtd">
+<flights>
+    <flight number="10"
+            type="Локальный"
+            date="28/09/2016"
+            time="12:30"
+            cost="2300">
+        <crew>
+            Васильев В.Т.;Рожков А.И.
+        </crew>
+    </flight>
+    <flight number="11"
+            type="Региональный"
+            date="13/06/2016"
+            time="11:40"
+            cost="4000">
+        <crew>
+            Овечкин И.Б.;Октанов Б.Ю
+        </crew>
+    </flight>
+    <flight number="221"
+            type="Аэробус"
+            date="22/12/2016"
+            time="07:10"
+            cost="6800">
+        <crew>
+            Иванов Т.Р;Огородников В.И.
+        </crew>
+    </flight>
+</flights>

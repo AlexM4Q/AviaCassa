@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<!ELEMENT flights (flight*)>
+<!ELEMENT flight (crew+)>
+<!ATTLIST flight
+number CDATA #REQUIRED
+type (Аэробус|Локальный|Региональный) #REQUIRED
+date CDATA #REQUIRED
+time CDATA #REQUIRED
+cost CDATA #REQUIRED
+>
+<!ELEMENT crew (#PCDATA)>
