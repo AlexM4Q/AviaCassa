@@ -56,7 +56,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -164,11 +165,12 @@
             this.Time,
             this.Cost});
             this.DataGrid.ContextMenuStrip = this.contextMenuStrip1;
-            this.DataGrid.Location = new System.Drawing.Point(12, 27);
+            this.DataGrid.Location = new System.Drawing.Point(19, 34);
+            this.DataGrid.Margin = new System.Windows.Forms.Padding(10);
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.ReadOnly = true;
             this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGrid.Size = new System.Drawing.Size(760, 343);
+            this.DataGrid.Size = new System.Drawing.Size(746, 329);
             this.DataGrid.TabIndex = 1;
             // 
             // FlightNumber
@@ -213,19 +215,19 @@
             this.MenuItemEdit,
             this.MenuItemRemove});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(129, 48);
             // 
             // MenuItemEdit
             // 
             this.MenuItemEdit.Name = "MenuItemEdit";
-            this.MenuItemEdit.Size = new System.Drawing.Size(180, 22);
+            this.MenuItemEdit.Size = new System.Drawing.Size(128, 22);
             this.MenuItemEdit.Text = "Изменить";
             this.MenuItemEdit.Click += new System.EventHandler(this.MenuItemEdit_Click);
             // 
             // MenuItemRemove
             // 
             this.MenuItemRemove.Name = "MenuItemRemove";
-            this.MenuItemRemove.Size = new System.Drawing.Size(180, 22);
+            this.MenuItemRemove.Size = new System.Drawing.Size(128, 22);
             this.MenuItemRemove.Text = "Удалить";
             this.MenuItemRemove.Click += new System.EventHandler(this.MenuItemRemove_Click);
             // 
@@ -242,7 +244,7 @@
             // ButtonAdd
             // 
             this.ButtonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonAdd.Location = new System.Drawing.Point(12, 376);
+            this.ButtonAdd.Location = new System.Drawing.Point(19, 376);
             this.ButtonAdd.Name = "ButtonAdd";
             this.ButtonAdd.Size = new System.Drawing.Size(75, 23);
             this.ButtonAdd.TabIndex = 2;
@@ -253,7 +255,7 @@
             // ButtonSearch
             // 
             this.ButtonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonSearch.Location = new System.Drawing.Point(93, 376);
+            this.ButtonSearch.Location = new System.Drawing.Point(100, 376);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.Size = new System.Drawing.Size(75, 23);
             this.ButtonSearch.TabIndex = 3;
@@ -271,13 +273,13 @@
             this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АвиаКасса";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Shown += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
@@ -294,8 +296,8 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemSave;
         private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn FlightNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Crew;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Crew;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;

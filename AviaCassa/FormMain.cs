@@ -11,6 +11,10 @@ namespace AviaCassa {
             InitializeComponent();
         }
 
+        private void FormMain_Load(object sender, EventArgs e) {
+            new FormAuth(this).Show();
+        }
+
         /// <summary>
         /// Экспорт рейсов из таблицы
         /// </summary>
@@ -113,11 +117,16 @@ namespace AviaCassa {
 
         private void ButtonSearch_Click(object sender, EventArgs e) => new FormSearch {Owner = this}.Show();
 
-        private void MenuItemHelp_Click(object sender, EventArgs e) => new FormAboutHelp() {Owner = this}.Show();
+        private void MenuItemHelp_Click(object sender, EventArgs e) => new FormAboutHelp {Owner = this}.Show();
 
         private void MenuItemProgram_Click(object sender, EventArgs e) => new FormAboutProgram {Owner = this}.Show();
 
-        private void MenuItemDev_Click(object sender, EventArgs e) => new FormAboutDev() {Owner = this}.Show();
+        private void MenuItemDev_Click(object sender, EventArgs e) => new FormAboutDev {Owner = this}.Show();
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e) {
+            var messageBoxResult = MessageBox.Show("Вы уверены, что хотите покиинуть приложение?", "АвиаКасса - Выход", MessageBoxButtons.YesNo);
+            e.Cancel = messageBoxResult != DialogResult.Yes;
+        }
 
     }
 
